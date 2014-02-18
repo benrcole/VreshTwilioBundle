@@ -1,0 +1,37 @@
+Vresh\TwilioBundle\Entity\TelephoneNumber:
+    type: entity
+    table: twilio__telephone_number
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        cli:
+            type: string
+            length: 15
+            nullable: false
+        countryCode:
+            type: string
+            length: 2
+            nullable: true
+        createdAt:
+            type: datetime
+            unsigned: false
+            nullable: false
+        updatedAt:
+            type: datetime
+            unsigned: false
+            nullable: true
+        enabled:
+            type: boolean
+            required: false
+    oneToMany:
+        messages:
+            targetEntity: Message
+            mappedBy: telephoneNumber
+    lifecycleCallbacks:
+        prePersist: [setCreatedValue,setUpdatedValue]
+        preUpdate: [setUpdatedValue]
