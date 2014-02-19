@@ -30,7 +30,7 @@ class VreshTwilioExtension extends Extension
         $processor = new Processor();
         $config = $processor->process($configuration->getConfigTreeBuilder(), $configs);
 
-        $container->getDefinition('twilio.handler')
+        $container->getDefinition('twilio.api')
             ->addArgument($config['sid'])
             ->addArgument($config['authToken'])
             ->addArgument($config['version'])
