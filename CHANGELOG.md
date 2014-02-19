@@ -1,5 +1,10 @@
 #Versions
 
+#BC Branch - 
+* Added Integration with Database and logging of messages
+* Loadbalances across available CLIs
+* Can CRON a job to reset use for given time period
+
 ##0.3
 
 * Removed old SDK files

@@ -5,6 +5,8 @@
 About
 -----
 
+I wouldn't use this if I were you - NOT STABLE
+
 This is just a wrapper for the [official SDK](https://github.com/twilio/twilio-php) provided by [Twilio](http://www.twilio.com/).
 
 This version has added control for phone numbers and allows automated provision of new numbers as load requires

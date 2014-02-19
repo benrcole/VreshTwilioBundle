@@ -1,4 +1,4 @@
-Vresh\TwilioBundle\Entity\TelephoneNumber:
+Vresh\TwilioBundle\Entity\Message:
     type: entity
     table: twilio__message
     fields:
@@ -9,13 +9,17 @@ Vresh\TwilioBundle\Entity\TelephoneNumber:
             nullable: false
             generator:
                 strategy: IDENTITY
-        cli:
+        recipient:
             type: string
             length: 15
             nullable: false
-        countryCode:
+        content:
             type: string
-            length: 2
+            length: 255
+            nullable: false
+        vendorReference:
+            type: string
+            length: 225
             nullable: true
         createdAt:
             type: datetime
@@ -25,9 +29,6 @@ Vresh\TwilioBundle\Entity\TelephoneNumber:
             type: datetime
             unsigned: false
             nullable: true
-        enabled:
-            type: boolean
-            required: false
     manyToOne:
         telephoneNumber:
             targetEntity: TelephoneNumber

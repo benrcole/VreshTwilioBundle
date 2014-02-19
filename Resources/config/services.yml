@@ -8,5 +8,6 @@ services:
     twilio.handler:
         class: Vresh\TwilioBundle\Service\TwilioHandler
         arguments:
-            - @twilio.api
             - @doctrine.orm.entity_manager
+            - @logger
+            - @twilio.api

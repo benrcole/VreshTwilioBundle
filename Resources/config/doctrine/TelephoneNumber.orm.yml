@@ -17,6 +17,8 @@ Vresh\TwilioBundle\Entity\TelephoneNumber:
             type: string
             length: 2
             nullable: true
+        sendCount:
+            type: integer
         createdAt:
             type: datetime
             unsigned: false
@@ -28,6 +30,7 @@ Vresh\TwilioBundle\Entity\TelephoneNumber:
         enabled:
             type: boolean
             required: false
+            nullable: true
     oneToMany:
         messages:
             targetEntity: Message
