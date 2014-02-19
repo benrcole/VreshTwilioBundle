@@ -25,6 +25,7 @@ class VreshTwilioExtension extends Extension
     {
         $loader = new YamlFileLoader($container, new FileLocator(array(__DIR__.'/../Resources/config')));
         $loader->load('services.yml');
+        $loader->load('admin.yml');
 
         $configuration = new Configuration();
         $processor = new Processor();

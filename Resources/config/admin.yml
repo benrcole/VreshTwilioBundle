@@ -1,0 +1,18 @@
+services:
+    twilio.admin.telephoneNumber:
+        class: Vresh\TwilioBundle\Admin\TelephoneNumberAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Texts", label: "Telehone Numbers" }
+        arguments:
+            - ~
+            - Vresh\TwilioBundle\Entity\TelephoneNumber
+            - ~
+
+#    knc_directory.admin.client:
+#        class: Vresh\TwilioBundle\Admin\ClientAdmin
+#        tags:
+ #           - { name: sonata.admin, manager_type: orm, group: "Directory", label: "Clients" }
+ #       arguments:
+ #           - ~
+ #           - Vresh\TwilioBundle\Entity\Client
+ #           - ~

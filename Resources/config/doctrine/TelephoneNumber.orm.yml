@@ -19,6 +19,7 @@ Vresh\TwilioBundle\Entity\TelephoneNumber:
             nullable: true
         sendCount:
             type: integer
+            nullable: true
         createdAt:
             type: datetime
             unsigned: false
