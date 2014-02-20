@@ -2,5 +2,7 @@
 
 
 {% block field%}
+    {% if object.getCountryCode %}
   <img src = "/bundles/vreshtwilio/images/flags/{{ object.getCountryCode |lower }}.png"/>
+    {% endif %}
 {% endblock %}
