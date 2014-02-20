@@ -1,0 +1,6 @@
+{% extends 'SonataAdminBundle:CRUD:base_show_field.html.twig' %}
+
+
+{% block field%}
+    {{ object.getCountryCode  }}   <img src = "/bundles/vreshtwilio/images/flags/{{ object.getCountryCode |lower }}.png"/>
+{% endblock %}

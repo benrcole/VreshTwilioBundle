@@ -12,6 +12,7 @@ namespace Vresh\TwilioBundle\Admin;
     use Sonata\AdminBundle\Datagrid\ListMapper;
     use Sonata\AdminBundle\Datagrid\DatagridMapper;
     use Sonata\AdminBundle\Form\FormMapper;
+    use Sonata\AdminBundle\Show\ShowMapper;
 
 class TelephoneNumberAdmin extends Admin
 {
@@ -48,7 +49,20 @@ class TelephoneNumberAdmin extends Admin
             ->addIdentifier('cli', null, array( 'route' => array('name' => 'show')))
             ->add('enabled')
             ->add('sendCount')
-            ->add('countryCode')
+            ->add('countryCode','string',array('template'=>'VreshTwilioBundle:Admin:list_countryCode.html.twig'))
+            ->add('createdAt')
+            ->add('updatedAt')
+        ;
+    }
+
+    // Fields to be shown on lists
+    protected function configureShowFields(ShowMapper $showMapper)
+    {
+        $showMapper
+            ->add('cli')
+            ->add('enabled')
+            ->add('sendCount')
+            ->add('countryCode',null,array('header'=>'Country','template'=>'VreshTwilioBundle:Admin:show_countryCode.html.twig'))
             ->add('createdAt')
             ->add('updatedAt')
         ;

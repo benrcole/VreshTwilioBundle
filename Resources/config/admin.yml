@@ -2,17 +2,17 @@ services:
     twilio.admin.telephoneNumber:
         class: Vresh\TwilioBundle\Admin\TelephoneNumberAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Texts", label: "Telehone Numbers" }
+            - { name: sonata.admin, manager_type: orm, group: "Texts", label: "Telephone Numbers" }
         arguments:
             - ~
             - Vresh\TwilioBundle\Entity\TelephoneNumber
             - ~
 
-#    knc_directory.admin.client:
-#        class: Vresh\TwilioBundle\Admin\ClientAdmin
-#        tags:
- #           - { name: sonata.admin, manager_type: orm, group: "Directory", label: "Clients" }
- #       arguments:
- #           - ~
- #           - Vresh\TwilioBundle\Entity\Client
- #           - ~
+    twilio.admin.client:
+        class: Vresh\TwilioBundle\Admin\MessageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Texts", label: "Messages" }
+        arguments:
+            - ~
+            - Vresh\TwilioBundle\Entity\Message
+            - ~

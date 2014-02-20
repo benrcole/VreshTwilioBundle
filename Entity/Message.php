@@ -54,7 +54,10 @@ class Message
         return $this->id;
     }
 
-
+public function __toString()
+{
+    return ($this -> getContent()?'SMS to '.$this -> getRecipient():'n/a');
+}
 
     /**
      * Set createdAt

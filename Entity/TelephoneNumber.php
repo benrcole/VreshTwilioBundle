@@ -52,6 +52,11 @@ class TelephoneNumber
         $this->messages = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return ($this -> getCli()?$this -> getCli():'n/a');
+    }
+
     /**
      * Get id
      *
