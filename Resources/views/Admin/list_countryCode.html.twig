@@ -3,6 +3,6 @@
 
 {% block field%}
     {% if object.getCountryCode %}
-  <img src = "/bundles/vreshtwilio/images/flags/{{ object.getCountryCode |lower }}.png"/>
+  <img src = "/bundles/vreshtwilio/images/flags/{{ object.getCountryCode |lower }}.png" title="{{ object.getCountryCode |country }}"  alt="{{ object.getCountryCode |country }}" />
     {% endif %}
 {% endblock %}
